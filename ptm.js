@@ -346,7 +346,7 @@ renderPlayer(); */
 let startTime; // = Date.now();
 
 /* >===× MOVT HANDLER ×===< */
-interactor.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", (e) => {
   
   if (e.key === "ArrowLeft") {
     slide("left");
