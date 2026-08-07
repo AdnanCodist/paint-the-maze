@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paint the Maze</title>
+  
+  <!-- ICONS - fontsAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="ptm.css">
+</head>
+
+<body>
+  
+  <!-- GAME BOARD -->
+  <div class="game">
+    <div class="container">
+      <div class="board"></div>
+    </div>
+  </div>
+  
+  <!-- LEVEL -->
+  <div class="levelbox">
+    Level - <div class="level">0</div>
+  </div>
+  
+  <!-- INTERACTOR -->
+  <div class="interactor"></div>
+  
+  <!-- POPUP MENU -->
+  <div class="bg">
+    <div class="popup">
+      
+      <h2 class="lvlFinH">🎉 Level Finished</h2>
+      
+      <div class="bestMovesDiv">
+        Best moves: 12
+      </div>
+      
+      <div class="stats">
+        Your Moves:
+        <span class="moves">00</span>
+      </div>
+      
+      <div class="stats">
+        Time taken - <span class="timeTaken">00:00</span>
+      </div>
+      
+      <div class="starDiv">
+        <span class="stars">
+          <i class="fa-solid fa-star"></i>
+        </span>
+        
+        <span class="stars">
+          <i class="fa-solid fa-star"></i>
+        </span>
+        
+        <span class="stars">
+          <i class="fa-solid fa-star"></i>
+        </span>
+      </div>
+      
+      <div class="nextLvl">
+        Next Level:
+      </div>
+      
+      <div class="buttons">
+        <button class="button replay">Replay</button>
+        <button class="button next">Next Level</button>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- FINAL POP UP -->
+  <div class="finalBg">
+    <div class="finalPopup">
+      <h2>You Have Finished all the levels</h2>
+      <div class="cup">🏆</div>
+      <div>stay tuned for more levels !</div>
+      <button class="finalBtn">Re-start</button>
+    </div>
+  </div>
+  
+  <!-- GAME MANUAL -->
+  <div class="manualBg">
+    <div class="manual">
+      
+      <h1>🎨 Paint the Maze</h1>
+      
+      <p class="welcome">
+        Welcome! Your goal is simple...
+      </p>
+      
+      <div class="rule">
+        <span>🟨</span>
+        <p>Swipe (or use Arrow Keys) to slide the player.</p>
+      </div>
+      
+      <div class="rule">
+        <span>🟩</span>
+        <p>The player keeps moving until it hits a wall.</p>
+      </div>
+      
+      <div class="rule">
+        <span>⬜</span>
+        <p>Paint every white tile to complete the level.</p>
+      </div>
+      
+      <div class="rule">
+        <span>⭐</span>
+        <p>Finish in as few moves as possible to earn 3 Stars!</p>
+      </div>
+      
+      <div class="rule">
+        <span>🔄</span>
+        <p>Stuck? Tap Replay and try a different route.</p>
+      </div>
+      
+      <button class="manualBtn">
+        OK, Let's Play!
+      </button>
+      
+    </div>
+  </div>
+  
+  <!-- JS -->
+  <script src="ptm.js"></script>
+</body>
+
+</html>
