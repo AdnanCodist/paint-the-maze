@@ -366,13 +366,16 @@ let endX;
 let endY;
 
 interactor.addEventListener("touchstart", (e) => {
+  e.preventDefault();
   
   startX = e.touches[0].clientX;
   startY = e.touches[0].clientY;
   
-});
+}, { passive: false });
 
 interactor.addEventListener("touchend", (e) => {
+  e.preventDefault();
+  
   endX = e.changedTouches[0].clientX;
   endY = e.changedTouches[0].clientY;
   
@@ -403,7 +406,7 @@ interactor.addEventListener("touchend", (e) => {
       slide("up");
     }
   }
-});
+}, { passive: false });
 
 
 function slide(direction) {
