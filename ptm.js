@@ -366,46 +366,32 @@ let endX;
 let endY;
 
 interactor.addEventListener("touchstart", (e) => {
-  e.preventDefault();
-  
-  startX = e.touches[0].clientX;
-  startY = e.touches[0].clientY;
-  
+    e.preventDefault();
+
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+}, { passive: false });
+
+interactor.addEventListener("touchmove", (e) => {
+    e.preventDefault();
 }, { passive: false });
 
 interactor.addEventListener("touchend", (e) => {
-  e.preventDefault();
-  
-  endX = e.changedTouches[0].clientX;
-  endY = e.changedTouches[0].clientY;
-  
-  let dx = endX - startX;
-  let dy = endY - startY;
-  
-  // horizontal movt
-  if (Math.abs(dx) > Math.abs(dy)) {
-    
-    // positive val : 50 -> 120 [right]
-    if (dx > 0) {
-      slide("right");
-      
-      // negative val : 50 -> 20 [left]   
+    e.preventDefault();
+
+    endX = e.changedTouches[0].clientX;
+    endY = e.changedTouches[0].clientY;
+
+    let dx = endX - startX;
+    let dy = endY - startY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        if (dx > 0) slide("right");
+        else slide("left");
     } else {
-      slide("left");
+        if (dy > 0) slide("down");
+        else slide("up");
     }
-    
-    // vertical movt
-  } else { // dy > dx
-    
-    // positive val : 50 -> 120 [down]
-    if (dy > 0) {
-      slide("down");
-      
-      // negative val : 50 -> 20 [up]
-    } else {
-      slide("up");
-    }
-  }
 }, { passive: false });
 
 
