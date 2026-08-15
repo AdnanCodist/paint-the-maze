@@ -601,7 +601,7 @@ function starsHandler() {
   let starsEarned = 0;
   let bestMoves = levels[currLevel].bestMoves;
   // ---- grading ----
-  if (totalMoves === bestMoves) {
+  if (totalMoves <= bestMoves) {
     starsEarned = 3;
   } else if (totalMoves <= (bestMoves + 2)) {
     starsEarned = 2;
